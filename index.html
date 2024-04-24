@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta charset="UTF-8">
-<title>Weather App</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="stylesheet" href="style.css">
-
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyWatch</title>
+</head>
 <body>
-  <label for="city"></label>
-  <input type= "text" id = "city>
-
-
-<script src="script.js"></script>
+  <header>
+    <nav>
+      <h1>SkyWatch</h1>
+      <label for="city"> Enter city here:</label>
+      <input type="text" name="city" id="city">
+      <button id= "toggle">Celsius/Fahrenheit</button>
+    </nav>
+    <main>
+      <div class="card-container">
+        <div id="current-forecast">
+        </div>
+        <div id="3day-forecast"></div>
+        <div id="forecast-stats"></div>
+        <div id="astro-stats"></div>
+      </div>
+    </main>
+    <footer></footer>
+  </header>
+  
 </body>
 </html>
