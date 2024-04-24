@@ -4,23 +4,69 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SkyWatch</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="toggle.css">
+  
 </head>
 <body>
   <header>
     <nav>
-      <h1>SkyWatch</h1>
+          <h1>SkyWatch</h1>
+          <div>
       <label for="city"> Enter city here:</label>
       <input type="text" name="city" id="city">
-      <button id= "toggle">Celsius/Fahrenheit</button>
-    </nav>
+    </div>
+        <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label>
+  
+  </nav>
     <main>
       <div class="card-container">
-        <div id="current-forecast">
+        <div class="card" id="current-forecast">
+          <div>
+          <h1>Calgary, Alberta</h1>
+          <h2>16 C</h2>
+          <h2>16 C | 3C</h2>
+          <h2>Feels like 16 C</h2>
         </div>
-        <div id="3day-forecast"></div>
-        <div id="forecast-stats"></div>
-        <div id="astro-stats"></div>
+<img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="weather icon">
+        </div>
+
+        <div class="card" id="3day-forecast">
+          <div>
+          <h1>Calgary, Alberta</h1>
+          <h2>16 C</h2>
+          <h2>16 C | 3C</h2>
+          <h2>Feels like 16 C</h2>
+        </div>
+        <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="weather icon">
+        </div>
+
+     
+        <div class="card"id="forecast-stats">
+          <div>
+          <h1>Calgary, Alberta</h1>
+          <h2>16 C</h2>
+          <h2>16 C | 3C</h2>
+          <h2>Feels like 16 C</h2>
+        </div>
+        <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="weather icon">
+        </div>
+     
+
+        <div class="card" id="astro-stats">
+          <div>
+          <h1>Calgary, Alberta</h1>
+          <h2>16 C</h2>
+          <h2>16 C | 3C</h2>
+          <h2>Feels like 16 C</h2>
+        </div>
+        <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="weather icon">
+        </div>
       </div>
+      
     </main>
     <footer></footer>
   </header>

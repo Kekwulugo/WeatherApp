@@ -5,4 +5,5 @@ async function getWeather(){
 }
 
 getWeather();
+//we should call this every 10 minutes or something
 
