@@ -1,16 +1,29 @@
 let submitBtn = document.querySelector("button");
-console.log(submitBtn);
-let inputValue = document.querySelector("input").value;
-
-submitBtn.addEventListener('click', getWeather(inputValue));
 
 
-function renderApp(visibility, condition, uv, feelslike_c, feelslike_f, humidity, isDay, precipitation, tempC, tempF){
+function renderApp(visibility, condition,img, uv, feelslike_c, feelslike_f, humidity, isDay, precipitation, tempC, tempF){
 
   let humidityText = document.querySelector("#humidity-text");
   humidityText.innerText = humidity;
-}
 
+  let uvText = document.querySelector("#uv");
+  uvText.innerText = uv;
+
+  let precipitationText = document.querySelector("#precipitation");
+  precipitationText.innerText = precipitation + " mm";
+
+  let visibilityText = document.querySelector("#visibility");
+  visibilityText.innerText = visibility;
+
+  let currentConditionText = document.querySelector("#current");
+  currentConditionText.innerText = condition;
+
+  let currentTempImg = document.querySelector("#current-temp-img");
+  currentTempImg.src = img;
+
+
+
+}
 
 async function getWeather(city){
   let url = 'http://api.weatherapi.com/v1/forecast.json?key=4e1ed8ad82bf447b940202722240804&days=5&q=' + city;
@@ -24,6 +37,7 @@ async function getWeather(city){
   
   let visibility = weather.current.vis_km;
   let condition = weather.current.condition.text;
+  let img  = weather.current.condition.icon;
   let uv = weather.current.uv;
   let feelslike_c = weather.current.feelslike_c;
   let feelslike_f = weather.current.feelslike_f;
@@ -33,9 +47,20 @@ async function getWeather(city){
   let tempC = weather.current.temp_c;
   let tempF = weather.current.temp_f;
 
-  renderApp(visibility, condition, uv, feelslike_c, feelslike_f, humidity, isDay, precipitation, tempC, tempF);
+  renderApp(visibility, condition, img, uv, feelslike_c, feelslike_f, humidity, isDay, precipitation, tempC, tempF);
   
 }
+
+submitBtn.addEventListener('click', ()=>{
+
+  let inputVal = document.querySelector("input").value;
+  getWeather(inputVal);
+  
+})
+
+
+
+
 
 
 

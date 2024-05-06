@@ -12,10 +12,9 @@
     <nav>
           <h1>SkyWatch</h1>
           <div>
-            <form>
-      <label for="city"> Enter city here:</label>
-      <input type="text" name="city" id="city" value="Calgary">
-      <button type="submit">Search Weather</button>
+            <form action="#" method="get" >
+            <input type="text" name="city" id="city" placeholder="enter city here">
+            <button type="button">Search Weather</button>
     </form>
     </div>
         <label class="switch">
@@ -25,13 +24,9 @@
   </nav>
 <div class="card-container">
         <div class="card" id="week-forecast">
-          <div>
-          <h1>Calgary, Alberta</h1>
-          <h2>16 C</h2>
-          <h2>16 C | 3C</h2>
-          <h2>Feels like 16 C</h2>
-        </div>
-<img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="weather icon">
+          <div class="day1">Day 1</div>
+          <div class="day2"> Day 2</div>
+          <div class="day3">Day 3</div>
         </div>
 
         <div class="card" id="humidity">
@@ -46,7 +41,7 @@
         <div class="card"id="UV-index">
           <div>
           <h1>UV Index</h1>
-          <h2>1</h2>
+          <h2 id="uv">1</h2>
           <h2>Low</h2>
         </div>
         <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="weather icon">
@@ -54,13 +49,13 @@
         <div class="card" id="Precipitation">
           <div>
             <h1>Precipitation</h1>
-            <h2>3mm in last 24h</h2>
+            <h2 id="precipitation">3mm in last 24h</h2>
           </div>
           <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="weather icon">
         </div>
         <div class="card" id="current-temp">
           <div>
-            <h1>Calgary, Alberta</h1>
+            <h1>Today's Weather</h1>
             <h2>16 C</h2>
             <h2>16 C | 3C</h2>
             <h2>Feels like 16 C</h2>
@@ -70,19 +65,17 @@
         <div class="card" id="Visibility">
           <div>
             <h1>Visibility</h1>
-            <h2>6 km</h2>
-            <h2>16 C | 3C</h2>
-            <h2>Feels like 16 C</h2>
+            <h2 id="visibility">6 km</h2>
           </div>
           <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="weather icon">
         </div>
         <div class="card" id="condition">
           <div>
             <h1>Current Condition</h1>
-            <h2>Patchy light snow</h2>
+            <h2 id="current">Patchy light snow</h2>
             
           </div>
-          <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="weather icon">
+          <img src="//cdn.weatherapi.com/weather/64x64/day/116.png" alt="weather icon" id="current-temp-img">
         </div>
       </div>
     <footer></footer>
