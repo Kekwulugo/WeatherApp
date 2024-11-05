@@ -30,7 +30,7 @@ async function getWeather(city){
 
   console.log(url);
 
-  const response = await fetch ((url), {mode:'cors'});
+  const response = await fetch (url, {mode:'cors'});
   const weather = await response.json();
 
   console.log(weather);
